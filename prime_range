@@ -1,0 +1,38 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	    int t=1;
+	    while(t>0){
+	        int m=1;
+	        int n=10;
+	        for(int j=m;j<=n;j++){
+	            if (isprime(j)){
+	                System.out.println(j);
+	            }
+	        }
+	        t--;
+	    }
+		}
+		static boolean isprime(int j){
+		   
+		    for(int i=2;i*i<=j;i++){
+		        if (j%i==0){
+		            return false;
+		        }
+		    }
+		    return true;
+		   
+		}
+	
+	}
+
+
+

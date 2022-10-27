@@ -1,0 +1,45 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+	   int[] arr={4,5,1,2,3};
+	   int[] farr=ssort(arr);
+	   System.out.println(Arrays.toString(farr));
+		   
+		}
+		static int[] ssort(int[] arr){
+		    int n=arr.length;
+		    
+		    for(int i=0;i<n;i++){
+		        int l=n-i-1;
+		        int maxpos=getmaxpos(l,arr);//get max value.
+		        //swap algo
+		        int temp=arr[maxpos];
+		        arr[maxpos]=arr[l];
+		        arr[l]=temp;
+		    }
+		    
+		    return arr;
+		}
+		static int getmaxpos(int l,int[] arr){
+		    int max=0;
+		    for(int i=0;i<=l;i++){
+		        if (arr[i]>arr[max]){
+		            max=i;
+		        }
+		    }
+		    System.out.println(max);
+		    return max;
+		}
+	
+	}
+
+
+
